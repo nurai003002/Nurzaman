@@ -904,16 +904,16 @@
 
     </section>
     <br><br><br><br>
-    <section id="section6" class    ="form">
-        <form class="formSection">
+    <section id="section6" class="form">
+        <form class="formSection" method = "POST">
+            {% csrf_token %}
             <h1>Заказать
                 обратный Звонок</h1>
             <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати</p>
-            <input placeholder="Введите имя" class="Forminput" type="text">
-            <input placeholder="Введите почту" class="Forminput" type="text">
 
-
-            <input placeholder="Введите номер" class="Forminput" type="text">
+            <input placeholder="Введите имя" name = 'name' class="Forminput" type="text">
+            <input placeholder="Введите почту" name = 'email' class="Forminput" type="text">
+            <input placeholder="Введите номер" name = 'number' class="Forminput" type="text">
             <div class="checkbox">
                 <input type="checkbox" name="" id="">
                 <p>Я даю согласие на обработку моих персональных данных согласно политике конфиденциальности</p>
