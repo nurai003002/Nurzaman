@@ -5,6 +5,7 @@ from apps.contacts.models import Contacts
 # Create your views here.
 
 def index(request):
+    
     slide = Slide.objects.latest('id')
     settings = Settings.objects.latest('id')
     projects = Projects.objects.all()
