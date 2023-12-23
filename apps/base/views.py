@@ -5,8 +5,8 @@ from apps.contacts.models import Contacts
 # Create your views here.
 
 def index(request):
-    settings = Settings.objects.latest('id')
     slide = Slide.objects.latest('id')
+    settings = Settings.objects.latest('id')
     projects = Projects.objects.all()
     about = About.objects.latest('id')
     kvartal = Kvartal.objects.all()
@@ -29,17 +29,3 @@ def index(request):
         contacts = Contacts.objects.create(name=name, email=email, number=number)
 
     return render(request, 'base/index.html', locals())
- 
-
-# def catalog(request):
-#     settings = models.Settings.objects.latest('id')
-#     slide = Slide.objects.latest('id')
-#     projects = Projects.objects.all()
-#     about = models.About.objects.latest('id')
-#     if request.method=="POST":
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         number = request.POST.get('number')
-#         contacts = Contacts.objects.create(name=name, email=email, number=number)
-
-#     return render(request, 'catalog.html', locals())
