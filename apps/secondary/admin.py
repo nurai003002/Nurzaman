@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.base import models
+
 from apps.secondary.models import Place, Slide, Projects,PlaceInlineInfo, GalleryImage,Gallery, Main,MainImage, Main2, MainImage2, EnvironmentImage, Environment, Street, Reach,ReachText,ApartmentPluse ,Apartment
 # Register your models here.
 class SlideFilterAdmin(admin.ModelAdmin):
