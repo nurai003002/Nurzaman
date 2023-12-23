@@ -1,14 +1,14 @@
 from django.shortcuts import render
-from apps.base import models
+from apps.base.models import Settings, About
 from apps.secondary.models import Slide,Projects,Apartment,Kvartal,Place,Gallery,Main,Main2, Environment, Street, Reach
 from apps.contacts.models import Contacts
 # Create your views here.
 
 def index(request):
-    settings = models.Settings.objects.latest('id')
+    settings = Settings.objects.latest('id')
     slide = Slide.objects.latest('id')
     projects = Projects.objects.all()
-    about = models.About.objects.latest('id')
+    about = About.objects.latest('id')
     kvartal = Kvartal.objects.all()
     place = Place.objects.latest('id')
     gallery = Gallery.objects.latest('id')
